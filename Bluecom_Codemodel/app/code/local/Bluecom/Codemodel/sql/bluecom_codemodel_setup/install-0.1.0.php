@@ -1,12 +1,12 @@
 <?php
 $installer = Mage::getResourceModel('catalog/setup', 'catalog_setup');
 $installer->startSetup();
-$installer->addAttribute('catalog_product', 'custom_attribute', array(
+$installer->addAttribute('catalog_product', 'code_model', array(
     'group'             => 'General',
     'type'              => Varien_Db_Ddl_Table::TYPE_VARCHAR,
     'backend'           => '',
     'frontend'          => '',
-    'label'             => 'Custom Attribute',
+    'label'             => 'Code Model',
     'input'             => 'text',
     'class'             => '',
     'source'            => '',

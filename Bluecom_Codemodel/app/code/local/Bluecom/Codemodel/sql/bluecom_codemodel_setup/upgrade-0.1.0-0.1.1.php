@@ -10,11 +10,11 @@ $entities = array(
     'order_item'
 );
 $options = array(
-    'type'     => Varien_Db_Ddl_Table::TYPE_VARCHAR,
-    'visible'  => true,
+    'type' => Varien_Db_Ddl_Table::TYPE_VARCHAR,
+    'visible' => true,
     'required' => false
 );
-foreach ($entities as $entity) {
-    $installer->addAttribute($entity, 'custom_attribute', $options);
+foreach($entities as $entity) {
+    $installer->addAttribute($entity, 'code_model', $options);
 }
 $installer->endSetup();
