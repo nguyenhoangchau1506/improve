@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Bluecom_Payment>
+            <version>0.1.0</version>
+        </Bluecom_Payment>
+    </modules>
+    <global>
+        <models>
+            <bluecom_payment>
+                <class>Bluecom_Payment_Model</class>
+                <resourceModel>bluecom_payment_resource</resourceModel>
+            </bluecom_payment>
+            <bluecom_payment_resource>
+                <class>Bluecom_Payment_Model_Resource</class>
+            </bluecom_payment_resource>
+        </models>
+        <blocks>
+            <bluecom_payment>
+                <class>Bluecom_Payment_Block</class>
+            </bluecom_payment>
+        </blocks>
+        <helpers>
+            <bluecom_payment>
+                <class>Bluecom_Payment_Helper</class>
+            </bluecom_payment>
+        </helpers>
+    </global>
+
+    <!--Set config default-->
+    <default>
+        <payment>
+            <bluecom_payment_group>
+                <model>bluecom_payment/standard</model>
+                <bluecom_payment_active>1</bluecom_payment_active>
+                <bluecom_payment_title>CUSTOM CARD</bluecom_payment_title>
+                <bluecom_payment_action>sale</bluecom_payment_action>
+                <bluecom_payment_order_status>pending</bluecom_payment_order_status>
+                <bluecom_payment_submit_url>training.magento.com</bluecom_payment_submit_url>
+                <bluecom_payment_merchant_id>Insert merchant id</bluecom_payment_merchant_id>
+                <bluecom_payment_allowspecific>0</bluecom_payment_allowspecific>
+                <bluecom_payment_sort_order>1</bluecom_payment_sort_order>
+            </bluecom_payment_group>
+        </payment>
+    </default>
+
+    <frontend>
+        <routers>
+            <bluecom_payment>
+                <use>standard</use>
+                <args>
+                    <module>Bluecom_Payment</module>
+                    <frontName>payment</frontName>
+                </args>
+            </bluecom_payment>
+        </routers>
+    </frontend>
+</config>
