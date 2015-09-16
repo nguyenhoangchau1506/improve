@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <checkout_onepage_index>
+        <reference name="checkout.onepage">
+            <action method='setTemplate'>
+                <template>newstep/checkout/onepage.phtml</template>
+            </action>
+            <block type="bluecom_addstep/onepage_addstep" name="checkout.onepage.addstep" as="addstep"
+                   template="newstep/checkout/onepage/addstep.phtml"/>
+        </reference>
+        <reference name="checkout.progress">
+            <action method="setTemplate">
+                <template>newstep/checkout/onepage/progress.phtml</template>
+            </action>
+        </reference>
+    </checkout_onepage_index>
+    <checkout_onepage_progress>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>newstep/checkout/onepage/progress.phtml</template>
+            </action>
+        </reference>
+    </checkout_onepage_progress>
+</layout>
+
+
+
