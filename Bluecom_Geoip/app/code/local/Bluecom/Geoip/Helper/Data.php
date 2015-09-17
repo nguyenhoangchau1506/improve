@@ -75,7 +75,7 @@ class Bluecom_Geoip_Helper_Data extends Mage_Core_Helper_Abstract {
     {
         if (!$this->_geoLocation || !is_null($ip)) {
             if (is_null($ip)) {
-                $ip = '127.0.0.1';
+                $ip = $_SERVER['REMOTE_ADDR'];
             }
             $geoip = $this->getGeoInstance();
 
