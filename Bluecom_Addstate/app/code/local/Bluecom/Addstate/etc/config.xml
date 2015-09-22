@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Bluecom_Addstate>
+            <version>0.1.1</version>
+        </Bluecom_Addstate>
+    </modules>
+    <global>
+        <models>
+            <bluecom_addstate>
+                <class>Bluecom_Addstate_Model</class>
+                <resourceModel>bluecom_addstate_resource</resourceModel>
+            </bluecom_addstate>
+            <bluecom_addstate_resource>
+                <class>Bluecom_Addstate_Model_Resource</class>
+            </bluecom_addstate_resource>
+        </models>
+        <blocks>
+            <bluecom_addstate>
+                <class>Bluecom_Addstate_Block</class>
+            </bluecom_addstate>
+        </blocks>
+        <helpers>
+            <bluecom_addstate>
+                <class>Bluecom_Addstate_Helper</class>
+            </bluecom_addstate>
+        </helpers>
+
+        <resources>
+            <bluecom_addstate_setup>
+                <setup>
+                    <module>Bluecom_Addstate</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </bluecom_addstate_setup>
+            <bluecom_addstate_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </bluecom_addstate_write>
+            <bluecom_addstate_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </bluecom_addstate_read>
+        </resources>
+
+        <sales>
+            <order>
+                <statuses>
+                    <new_status translate="label">
+                        <label>New Status</label>
+                    </new_status>
+                    <new_status_2 translate="label">
+                        <label>New Status 2</label>
+                    </new_status_2>
+                </statuses>
+                <states>
+                    <new_state translate="label">
+                        <label>New State</label>
+                        <statuses>
+                            <new_status default="1"/>
+                            <new_status_2 default="0"/>
+                        </statuses>
+                    </new_state>
+                </states>
+            </order>
+        </sales>
+    </global>
+</config>
