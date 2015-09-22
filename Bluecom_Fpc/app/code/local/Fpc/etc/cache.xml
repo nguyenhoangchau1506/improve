@@ -1,0 +1,11 @@
+<config>
+     <placeholders>
+         <bluecom_fpc>
+             <block>bluecom_fpc/messages</block>
+             <name>bluecom.fpc.messages</name>
+             <placeholder>BLUECOM_FPC_MESSAGES_CACHE</placeholder>
+             <container>Bluecom_Fpc_Model_Container_Messages</container>
+             <cache_life>5</cache_life>
+         </bluecom_fpc>
+     </placeholders>
+</config>
